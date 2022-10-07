@@ -72,7 +72,7 @@ namespace WebApplication1.Controllers
         {
             var contact = await dbContext.Contacts.FindAsync(id);
             if (contact != null)
-            {
+            { 
                 dbContext.Remove(contact);
                 await dbContext.SaveChangesAsync();
                 return Ok(contact);
